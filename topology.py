@@ -45,22 +45,15 @@ class MyTopo(Topo):
         # Add links S-S
         # self.addLink( node1, node2, bw=10, delay='5ms', max_queue_size=1000, loss=10, use_htb=True)
 
-        self.addLink(kataniaS, palermoS)
-        self.addLink(kataniaS, neapolS)
-        self.addLink(palermoS, neapolS)
-        self.addLink(palermoS, rzymS)
-        self.addLink(neapolS, bariS)
-        self.addLink(neapolS, rzymS)
+        self.addLink(rzymS, mediolanS)
+        self.addLink(rzymS, turynS)
+        self.addLink(rzymS, neapolS)
         self.addLink(rzymS, bariS)
-        self.addLink(rzymS, boloniaS)
-        self.addLink(rzymS, florencjaS)
-        self.addLink(florencjaS, genuaS)
-        self.addLink(florencjaS, mediolanS)
-        self.addLink(genuaS, mediolanS)
-        self.addLink(turynS, mediolanS)
-        self.addLink(turynS, genuaS)
-        self.addLink(turynS, boloniaS)
+        self.addLink(mediolanS, florencjaS)
         self.addLink(mediolanS, boloniaS)
+        self.addLink(turynS, genuaS)
+        self.addLink(neapolS, palermoS)
+        self.addLink(neapolS, kataniaS)
 
 
 topos = {'mytopo': (lambda: MyTopo())}
