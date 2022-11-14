@@ -1,5 +1,3 @@
-from mininet import net
-from mininet.net import Mininet
 from mininet.topo import Topo
 
 
@@ -45,8 +43,6 @@ class MyTopo(Topo):
         self.addLink(katania, s10)
 
         # Add links S-S
-        # self.addLink( node1, node2, bw=10, delay='5ms', max_queue_size=1000, loss=10, use_htb=True)
-        #  v=s/t t=s/v=s/200,000km/s = s/200 km/ms
 
         self.addLink(s1, s2, delay='2.4ms')  # 480
         self.addLink(s1, s4, delay='2.65ms')  # 530
@@ -57,6 +53,9 @@ class MyTopo(Topo):
         self.addLink(s4, s6, delay='0.6ms')  # 120
         self.addLink(s3, s5, delay='1.55ms')  # 310
         self.addLink(s3, s10, delay='1.85ms')  # 370
+        self.addLink(s7, s6, delay='0.95ms')
+        self.addLink(s5, s6, delay='4ms')
+        self.addLink(s7, s6, delay='2.15ms')
 
 
 topos = {'mytopo': (lambda: MyTopo())}
