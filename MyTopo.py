@@ -55,7 +55,7 @@ class MyTopo(Topo):
         self.addLink(s3, s10, delay='1.85ms')  # 370
         self.addLink(s7, s6, delay='0.95ms')
         self.addLink(s5, s6, delay='4ms')
-        self.addLink(s7, s6, delay='2.15ms')
+        self.addLink(s9, s10, delay='2.15ms')
 
 
 topos = {'mytopo': (lambda: MyTopo())}
