@@ -44,18 +44,15 @@ class MyTopo(Topo):
 
         # Add links S-S
 
-        self.addLink(s1, s2, delay='2.4ms', bw=1000)  # 480
-        self.addLink(s1, s4, delay='2.65ms', bw=1000)  # 530
-        self.addLink(s1, s3, delay='0.95ms', bw=1000)  # 190
-        self.addLink(s1, s9, delay='1.9ms', bw=1000)  # 380
-        self.addLink(s2, s8, delay='1.25ms', bw=1000)  # 250
-        self.addLink(s2, s7, delay='1ms', bw=1000)  # 200
-        self.addLink(s4, s6, delay='0.6ms', bw=1000)  # 120
-        self.addLink(s3, s5, delay='1.55ms', bw=1000)  # 310
-        self.addLink(s3, s10, delay='1.85ms', bw=1000)  # 370
-        self.addLink(s7, s6, delay='0.95ms', bw=1000)
-        self.addLink(s5, s6, delay='4ms', bw=1000)
-        self.addLink(s9, s10, delay='2.15ms', bw=1000)
+        self.addLink(s1, s2, delay='2.4ms')  # 480
+        self.addLink(s1, s4, delay='2.65ms')  # 530
+        self.addLink(s1, s3, delay='0.95ms')  # 190
+        self.addLink(s1, s9, delay='1.9ms')  # 380
+        self.addLink(s2, s8, delay='1.25ms')  # 250
+        self.addLink(s2, s7, delay='1ms')  # 200
+        self.addLink(s4, s6, delay='0.6ms')  # 120
+        self.addLink(s3, s5, delay='1.55ms')  # 310
+        self.addLink(s3, s10, delay='1.85ms')  # 370
 
 
 topos = {'mytopo': (lambda: MyTopo())}
